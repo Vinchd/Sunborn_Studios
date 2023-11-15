@@ -29,6 +29,66 @@
   letter-spacing: 0.2rem;
 }
 
+/* BugerMenu */
+.burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+label span {
+  background: black;
+  border-radius: 10px;
+  height: 3px;
+  margin: 4px 0;
+  transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+.burgerline:nth-of-type(1) {
+  width: 50%;
+}
+
+.burgerline:nth-of-type(2) {
+  width: 100%;
+}
+
+.burgerline:nth-of-type(3) {
+  width: 75%;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:checked ~ span:nth-of-type(1) {
+  transform-origin: bottom;
+  transform: rotatez(45deg) translate(4px, 0px);
+}
+
+input[type="checkbox"]:checked ~ span:nth-of-type(2) {
+  transform-origin: top;
+  transform: rotatez(-45deg);
+}
+
+input[type="checkbox"]:checked ~ span:nth-of-type(3) {
+  transform-origin: bottom;
+  width: 50%;
+  transform: translate(18px, -4px) rotatez(45deg);
+}
+
+.menu {
+  transition: transform 0.5s ease-out;
+  z-index: 5;
+}
+
+.active {
+  transform: translate(0);
+  display: flex;
+}
+
 .scroll-arrow {
   position: absolute;
   bottom: 5%;
@@ -73,7 +133,11 @@
 .homegrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 280px);
   grid-column-gap: 10px;
   grid-row-gap: 0px;
 }
+
+/* * {
+  box-shadow: 0 0 0 3px red inset;
+} */
