@@ -16,7 +16,7 @@ export default function Header() {
         <Link to="/" onClick={handleClickLink}>
           <h1 className="mr-5 text-xl">Sunborn Studios</h1>
         </Link>
-        <nav className="flex gap-6 max-md:hidden">
+        <nav className="flex gap-6 max-lg:hidden">
           <Link to="/">Home</Link>
           <div>&#8226;</div>
           <Link to="/about">About</Link>
@@ -37,7 +37,7 @@ export default function Header() {
         </label>
       </div>
       <nav
-        className={`absolute z-10 flex flex-col items-center gap-1 p-6 right-0 rounded-bl-sm translate-y-[-100%] bg-quaternary w-fit min-md:hidden menu ${active}`}
+        className={`absolute z-10 flex flex-col items-center gap-1 p-6 right-0 rounded-bl-sm translate-y-[-100%] bg-quaternary w-fit min-lg:hidden menu ${active}`}
       >
         <Link
           to="/"
