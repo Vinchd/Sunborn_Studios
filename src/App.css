@@ -130,14 +130,53 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3) {
   }
 }
 
-.homegrid {
+/* * {
+  box-shadow: 0 0 0 3px red inset;
+} */
+
+#homegrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 280px);
   grid-column-gap: 10px;
-  grid-row-gap: 0px;
 }
 
-/* * {
-  box-shadow: 0 0 0 3px red inset;
-} */
+#homegrid > div {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  #homegrid {
+    gap: 10px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 280px auto 280px auto 280px auto;
+  }
+
+  #homegrid > div {
+    grid-row: auto;
+  }
+
+  #homegrid > div:nth-child(1) {
+    grid-row: 1;
+  }
+
+  #homegrid > div:nth-child(2) {
+    grid-row: 2;
+  }
+
+  #homegrid > div:nth-child(3) {
+    grid-row: 4;
+  }
+
+  #homegrid > div:nth-child(4) {
+    grid-row: 3;
+  }
+
+  #homegrid > div:nth-child(5) {
+    grid-row: 5;
+  }
+
+  #homegrid > div:nth-child(6) {
+    grid-row: 6;
+  }
+}
