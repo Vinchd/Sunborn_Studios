@@ -49,7 +49,7 @@ export default function Home() {
         </div>
       </Parallax>
       <Link
-        to="home-content"
+        to="homegrid"
         smooth={true}
         duration={2000}
         className="scroll-arrow"
